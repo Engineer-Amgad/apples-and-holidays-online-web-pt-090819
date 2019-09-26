@@ -70,10 +70,10 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season_string}:"
     holiday_array.each do |holiday, supplies|
       holiday_string = ""
-      
+      supplies_string =""
       holiday_string = holiday.to_s.capitalize
-      
-      puts "#{holiday_string}: #{supplies}.join(",")"
+      supplies_string = supplies.join(",")
+      puts "#{holiday_string}: #{supplies_string}
       #binding.pry
       
     end 
