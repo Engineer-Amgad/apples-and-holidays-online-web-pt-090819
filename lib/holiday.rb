@@ -68,22 +68,13 @@ def all_supplies_in_holidays(holiday_hash)
     season_string = ""
     season_string = season.to_s.capitalize
     puts "#{season_string}:"
-    holiday_array.each do |holiday, supplies|
-      holiday_string = []
-      supplies_string =""
-      holiday_string = holiday.to_s.split("_")
-      
-      holiday_string.map do |el| 
-        el.capitalize
-      binding.pry
-      end
-      supplies_string = supplies.join(", ")
-      
-      puts "  #{holiday_string}: #{supplies_string}"
-      #binding.pry
-      
-    end 
-   end 
+    
+     holiday_hash.each do | season, holiday|
+     puts "#{season.capitalize}:"
+     holiday.each do |holiday, item|
+       puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
+     end
+  end 
 end
 
 def all_holidays_with_bbq(holiday_hash)
