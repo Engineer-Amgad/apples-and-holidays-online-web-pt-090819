@@ -72,7 +72,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_string = ""
       supplies_string =""
       holiday_string = holiday.to_s.split("_")
-      holiday_string.collect |el| { el.capitalize }
+      holiday_string.collect |el| { el.to_s.capitalize }
       supplies_string = supplies.join(", ")
       puts "  #{holiday_string}: #{supplies_string}"
       #binding.pry
