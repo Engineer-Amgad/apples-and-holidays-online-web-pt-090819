@@ -74,7 +74,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_string = holiday.to_s.split("_")
       
       holiday_string.map do |el| 
-        el
+        el.capitalize
       binding.pry
       end
       supplies_string = supplies.join(", ")
